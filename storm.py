@@ -28,7 +28,7 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
 s  = sched.scheduler(time.time, time.sleep)
  
 def do_something(sc):
-        response = urllib2.urlopen('https://github.com/somer4ndompunk/AnonStorm/blob/master/TweetLog.txt')
+        response = urllib2.urlopen('https://raw.github.com/somer4ndompunk/AnonStorm/master/TweetLog.txt') #Change the "TweetLog.txt" to your ops .txt file
         contents = response.readlines()
  
         while True:
