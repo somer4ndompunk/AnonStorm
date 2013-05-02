@@ -1,7 +1,10 @@
 # Twitter Storm Python Bot
 #
-# This script is released with no license. Fuck that. Edit and use as you wish
-# This script, as it sits will pull from an online file located on The's webhost.
+# IF YOU RECEIVED THIS SCRIPT FROM ANOTHER LOCATION OTHER THAN GITHUB.COM/SOMER4NDOMPUNK THEN YOU WILL BE USING AN OUTDATED AND
+# POTENTIALLY DANGEROUS VERSION OF THIS SCRIPT. NEVER EVER EVER DOWNLOAD SHIT FROM A FILE HOST, YOU CAN NOT VERIFY THE CODE
+# UNTIL YOU DOWNLOAD IT, BY THEN, IT COULD BE TOO LATE!!
+#
+# This script, as it sits will pull from an online file.
 # It will pull a random tweet from the hosted file, and tweet every 2 minutes a new random tweet.
 # 
 # You MUST run the auth.py script first to obtain your access_token_key and your access_token_secret. This will authorize the app with your twitter account.
@@ -10,15 +13,13 @@
 # A VERY special thanks to The, Happyface, Prophet and kyzersane for their work on this script, hosting the script, and hosting the tweet file.
 # Without each of your feed backs this project would never have become a reality.
 #
-# Version 0.5b RC1
-#
-# http://www.anonymous101.tk/tweetstorm0.5b.zip
+# Version 1.0
 
 import time, datetime, sched, random
 import urllib2
 import twitter
      
-print('Welcome to TwitterStorm v0.5b RC1')
+print('Welcome to TwitterStorm v1.0 | If you did not download this from SomeR4ndomPunks GitHub then you are outdated and at risk! Enjoy')
 # Do not edit consumer_key nor consumer_secret. These are used by Twitters API
 api=twitter.Api(consumer_key='5VuZ39FbuRfFdr0CpNf3zg',consumer_secret='5FPi40pwS3buTMFMXm8URXoRSCubw0LqM5KtTPkdo',access_token_key='YOUR_ACCESS_TOKEN_HERE',access_token_secret='YOUR_ACCESS_SECRET_HERE')
      
@@ -28,7 +29,7 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
 s  = sched.scheduler(time.time, time.sleep)
  
 def do_something(sc):
-        response = urllib2.urlopen('https://raw.github.com/somer4ndompunk/AnonStorm/master/TweetLog.txt') #Change the "TweetLog.txt" to your ops .txt file
+        response = urllib2.urlopen('https://www.dropbox.com/s/6twzay3r5nrhsiz/TweetLog.txt') #Change the "TweetLog.txt" to your ops .txt file (Find out from The in AnonOps IRC)
         contents = response.readlines()
  
         while True:
