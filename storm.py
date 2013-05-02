@@ -1,4 +1,4 @@
-# Twitter Storm Python Bot
+# AnonStorm twitterstorm bot
 #
 # IF YOU RECEIVED THIS SCRIPT FROM ANOTHER LOCATION OTHER THAN GITHUB.COM/SOMER4NDOMPUNK THEN YOU WILL BE USING AN OUTDATED AND
 # POTENTIALLY DANGEROUS VERSION OF THIS SCRIPT. NEVER EVER EVER DOWNLOAD SHIT FROM A FILE HOST, YOU CAN NOT VERIFY THE CODE
@@ -19,7 +19,7 @@ import time, datetime, sched, random
 import urllib2
 import twitter
      
-print('Welcome to TwitterStorm v1.0 | If you did not download this from SomeR4ndomPunks GitHub then you are outdated and at risk! Enjoy')
+print('Welcome to AnonStorm v1.0 | If you did not download this from SomeR4ndomPunks GitHub then you are outdated and at risk! Enjoy')
 # Do not edit consumer_key nor consumer_secret. These are used by Twitters API
 api=twitter.Api(consumer_key='5VuZ39FbuRfFdr0CpNf3zg',consumer_secret='5FPi40pwS3buTMFMXm8URXoRSCubw0LqM5KtTPkdo',access_token_key='YOUR_ACCESS_TOKEN_HERE',access_token_secret='YOUR_ACCESS_SECRET_HERE')
      
