@@ -29,7 +29,7 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
 s  = sched.scheduler(time.time, time.sleep)
  
 def do_something(sc):
-        response = urllib2.urlopen('https://www.dropbox.com/s/6twzay3r5nrhsiz/TweetLog.txt') #Change the "TweetLog.txt" to your ops .txt file (Find out from The in AnonOps IRC)
+        response = urllib2.urlopen('LINK_TO_OP_TWEET_FILE')
         contents = response.readlines()
  
         while True:
