@@ -1,36 +1,75 @@
-Welcome to AnonStorm v1.0
+AnonStorm v2.0
 
-AnonStorm is a simple TwitterStorm script written in Python.
-This tool is to make life easier for participants of activist related twitter storms.
-It's design automates your tweets using a hosted text file so you don't have to copy/paste manually.
+*********
+*Credits*
+*********
+Jedipi especially, thank you so much for the awesome additions and core of this project <3
+Prophet and kyzersane for the input and initial guidance in the project
 
+**********************
+*Requirements & Setup*
+**********************
+     Python, Python-Twitter, Python-pip, OAuth2, simplejson, httplib2
 
-SetUp:
+                               ********
+                               *Debian*
+                               ********
+   sudo apt-get install python
+   sudo apt-get install python-pip
+   sudo pip install python-twitter
 
-You need Python installed. Check out http://anonymous101.tk/index.php/TweetStorm for instructions
+                               *********
+                               *Windows*
+                               *********
+Replace XX with your python version number. Example: Python10, Python27, Python31, etc
 
-You will also need to run "auth.py" and allow access of the application to your twitter account,
-"auth.py" will give you a URL, copy then paste that URL into your web browser, authorize the application.
-Your web browser will then give you a "Pin Code" from twitter, enter this Pin Code into the auth.py script,
-The script will then provide you with 2 things, an Access Token Key and an Access Token Secret, these are 
-basically encrypted versions of your user name and password. This step better protects you as the script
-will not send plaintext information.
+   reference: https://python-guide.readthedocs.org/en/latest/starting/install/win.html
+   Install Python
+   Create scripts folder in C:\PythonXX -> "C:\PythonXX\Scripts"
+   distribute and pip
 
-Once you have your Token information, you will need to edit "storm.py" and enter the Key and Secret
-in the spots specified in the script, they are marked as "YOUR_ACCESS_TOKEN_HERE" and "YOUR_ACCESS_SECRET_HERE".
+Pip & Distribute setup
 
+   Save http://python-distribute.org/distribute_setup.py to scripts folder (You do not need virtualenv)
+   Set environment variables. Change the system variable "path" and add ";C:\Python27\;C:\Python27\Scripts\"
+   Open CMD
+   cd C:\PythonXX
+   execute easy_install pip
+   Let it run the setup and wait for it to finish
 
-After you have everything set up there, you should have been provided with a link from either The in AnonOps
-IRC, or by an operator of your Operation, which will have a link provided by The. You will need to paste that
-link in place of "LINK_TO_OP_TWEET_FILE". 
+Install dependencies
 
-Once those are done, save the storm.py file and fire it up for your twitterstorms!
+   execute pip install python-twitter
+   End result -> "Successfully installed python-twitter simplejson oauth2 httplib2"
+                                *****
+                                *Mac*
+                                *****
+   sudo easy_install pip
+   sudo pip install python-twitter
 
+*******
+*Usage*
+*******
+You MUST run auth.py prior to running the storm.py script.
+Simply run "python auth.py" and follow the onscreen instructions.
+The end result is you will now have an Access Token Key and an Access Token Secret, be sure to save these somewhere safe for future use.
+If you save the Key and Secret, there is no need to run this script again, unless you intend to use more than 1 account with the script.
 
+To run the storm script:
+python storm.py --access_token_key <twitter access_token_key> --access_token_secret <twitter access_token_secret> --tweet_file_url <tweet_file_url>  (optional; if not used, will default to AnonStorm/TweetLog.txt)
 
-If you have any issues running this application speak to The in AnonOps IRC, or email us at: somepunk@somer4ndompunk.tk
+This script can run with more than one instance. You will need to enter your Key and Secret each time you run the script. This means if you open 5 command windows, each can utilize it's own Key and Secret.
 
-
-If you would like us to host a text file for your op, speak directly to The in AnonOps IRC.
-
-ktnxbai!
+*********************************
+*Setting a Static Key and Secret*
+*********************************
+If you so wish, you can save your Key and Secret within the script and not have to use the --access_token_secret and --access_token_key with each run.
+To do this, edit the storm.py file and locate lines 62 and 63, they look like:
+    arg_parser.add_argument("--access_token_key",required=True,type=str,help="Twitter access token key (see file for instructions)")
+    arg_parser.add_argument("--access_token_secret",required=True,type=str,help="Twitter access token secret (see file for instructions)")
+Simply add default="YOUR_KEY_HERE" on line 62 and
+default="YOUR_SECRET_HERE" on line 63, like so:
+    arg_parser.add_argument("--access_token_key",default="ggadhfj543ddbvbt543",required=True,type=str,help="Twitter access token key (see file for instructions)")
+    arg_parser.add_argument("--access_token_secret",default="gghcnryhghbvvc854336vjnhy6",required=True,type=str,help="Twitter access token secret (see file for instructions)")
+Then save the file.
+YOU WILL STILL RETAIN ABILITY TO OVERRIDE BY USING THE --access_token_key and --access_token_secret ARGUMENTS
