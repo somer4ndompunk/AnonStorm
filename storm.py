@@ -1,25 +1,13 @@
-	
-
-# AnonStorm twitterstorm bot
-#
 # Usage: python storm.py --access_token_key <twitter access_token_key> --access_token_secret <twitter access_token_secret>
 #                        --tweet_file_url <tweet_file_url>  (optional; if not used, will default to AnonStorm/TweetLog.txt)
-#
-# IF YOU RECEIVED THIS SCRIPT FROM ANOTHER LOCATION OTHER THAN GITHUB.COM/SOMER4NDOMPUNK THEN YOU WILL BE USING AN OUTDATED AND
-# POTENTIALLY DANGEROUS VERSION OF THIS SCRIPT. NEVER EVER EVER DOWNLOAD SHIT FROM A FILE HOST, YOU CAN NOT VERIFY THE CODE
-# UNTIL YOU DOWNLOAD IT, BY THEN, IT COULD BE TOO LATE!!
-#
-# A VERY special thanks to The, Happyface, Prophet and kyzersane for their work on this script, hosting the script, and hosting the tweet file.
-# Without each of your feed backs this project would never have become a reality.
-#
-# Version 1.0
+
  
 import time, datetime, sched, random, argparse
 import urllib2
 import twitter
  
 def main(args):
-    print("Welcome to AnonStorm v1.0 | If you did not download this from SomeR4ndomPunks GitHub then you are outdated and at risk! Enjoy\n")
+    print("Welcome to AnonStorm v2.0 | If you did not download this from SomeR4ndomPunks GitHub then you are outdated and at risk! Enjoy\n")
     # Do not edit consumer_key nor consumer_secret. These are used by Twitters API
     api=twitter.Api(consumer_key="5VuZ39FbuRfFdr0CpNf3zg",consumer_secret="5FPi40pwS3buTMFMXm8URXoRSCubw0LqM5KtTPkdo",access_token_key=args.access_token_key,access_token_secret=args.access_token_secret)
          
