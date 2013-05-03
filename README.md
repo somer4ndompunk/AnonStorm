@@ -56,7 +56,8 @@ The end result is you will now have an Access Token Key and an Access Token Secr
 If you save the Key and Secret, there is no need to run this script again, unless you intend to use more than 1 account with the script.
 
 To run the storm script:
-python storm.py --access_token_key <twitter access_token_key> --access_token_secret <twitter access_token_secret> --tweet_file_url <tweet_file_url>  (optional; if not used, will default to AnonStorm/TweetLog.txt)
+
+   python storm.py --access_token_key <twitter access_token_key> --access_token_secret <twitter access_token_secret> --tweet_file_url <tweet_file_url>  (optional; if not used, will default to AnonStorm/TweetLog.txt)
 
 This script can run with more than one instance. You will need to enter your Key and Secret each time you run the script. This means if you open 5 command windows, each can utilize it's own Key and Secret.
 
