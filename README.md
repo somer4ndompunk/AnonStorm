@@ -65,11 +65,15 @@ This script can run with more than one instance. You will need to enter your Key
 *********************************
 If you so wish, you can save your Key and Secret within the script and not have to use the --access_token_secret and --access_token_key with each run.
 To do this, edit the storm.py file and locate lines 62 and 63, they look like:
+
     arg_parser.add_argument("--access_token_key",required=True,type=str,help="Twitter access token key (see file for instructions)")
     arg_parser.add_argument("--access_token_secret",required=True,type=str,help="Twitter access token secret (see file for instructions)")
+
 Simply add default="YOUR_KEY_HERE" on line 62 and
 default="YOUR_SECRET_HERE" on line 63, like so:
+
     arg_parser.add_argument("--access_token_key",default="ggadhfj543ddbvbt543",required=True,type=str,help="Twitter access token key (see file for instructions)")
     arg_parser.add_argument("--access_token_secret",default="gghcnryhghbvvc854336vjnhy6",required=True,type=str,help="Twitter access token secret (see file for instructions)")
+
 Then save the file.
 YOU WILL STILL RETAIN ABILITY TO OVERRIDE BY USING THE --access_token_key and --access_token_secret ARGUMENTS
