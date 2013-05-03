@@ -1,0 +1,5 @@
+Use this file to place your tweets.
+Remember to keep them under 140 characters.
+One line per tweet.
+Storm.py will pull a random line from this file.
+This file is only relevent if you choose to host the file on your local machine.
