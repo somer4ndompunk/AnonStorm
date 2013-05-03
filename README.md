@@ -11,16 +11,16 @@ Prophet and kyzersane for the input and initial guidance in the project
 **********************
      Python, Python-Twitter, Python-pip, OAuth2, simplejson, httplib2
 
-                               ********
-                               *Debian*
-                               ********
+********
+*Debian*
+********
    sudo apt-get install python
    sudo apt-get install python-pip
    sudo pip install python-twitter
 
-                               *********
-                               *Windows*
-                               *********
+*********
+*Windows*
+*********
 Replace XX with your python version number. Example: Python10, Python27, Python31, etc
 
    reference: https://python-guide.readthedocs.org/en/latest/starting/install/win.html
